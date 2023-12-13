@@ -1,0 +1,321 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+/* =============== VARIABLES CSS ============== */
+:root{
+    --header-height: 3.5rem; 
+
+    /* ================== colors ================== */
+    --white-color: #fff;
+    --black-color: #000;
+    --accent-color: #F55A07;
+    --text-color: #888888;
+    --gray-color: #E2E7EC;
+
+    /* ============ Font and typography =========== */
+    --body-font: 'Lato', sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* ================ font weight =============== */
+    --font-bold: 700;
+
+    /* ================== z index ================= */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+/* =================== BASE =================== */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: rgba(235, 235, 235, 0.70);
+}
+
+h1,h2,h3{
+    font-family: 'Srbija';
+}
+p, span{
+    font-family: 'Open sans'
+}
+h1,h2,h3,p{
+    line-height: 140%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* =========== REUSABLE CSS CLASSES =========== */
+.container{
+    max-width: 100%;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.section__title{
+    font: 24px;
+    margin-bottom: 15px;
+}
+
+.content-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow:auto;
+    padding-bottom: 10px;
+}
+
+.content-box-vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    overflow:auto;
+    padding-bottom: 10px;
+}
+/* =========== HEADER =========== */
+header{
+    background: var(--white-color);
+    border-radius: 0 0 10px 10px;
+}
+.header{
+    padding: 20px 20px 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__title{
+    font-size: 2rem;
+    font-family: 'Srbija';
+}
+.header__notifications{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.35rem;
+    color: var(--accent-color);
+    background: var(--gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px #272727;
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-evenly;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: var(--black-color);
+}
+.nav__link{
+    color: var(--white-color);
+    font-size: 24px;
+}
+
+/* =========== MYEVENTS =========== */
+.myevents{
+    margin-top: 10px;
+    border-radius: 10px;
+    background: var(--white-color);
+}
+.myevents__container{
+    padding: 15px 0 15px 10px;
+
+}
+
+
+.event__image{
+    width: 300px;
+    height: 160px;
+    border-radius: 10px;
+}
+.event{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.event__image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* =========== RELEVANT =========== */
+.relevant{
+    margin-top: 10px;
+    border-radius: 10px;
+    background: var(--white-color);
+}
+
+.relevant__container{
+    padding: 15px 0 15px 10px;
+}
+
+.stories{
+    margin-bottom: 20px;
+}
+.stories__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stories__name{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stories__img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.stories__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========== BLOG =========== */
+.blog{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background: #fff;
+}
+.blog__container{
+    padding: 15px 0 15px 10px;
+}
+
+.blog__item{
+    align-self: stretch;
+    display :flex;
+    gap: 10px;
+    padding: 10px;
+}
+#active{
+    background: var(--gray-color);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.blog__img{
+    width: 80px;
+    height: 70px;
+}
+.blog__img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+}
+.blog__desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blog__title{
+    font-size: 16px;
+}
+.blog__tag{
+    font-size: 12px;
+    color: #BDBDBD;
+}
+
+/* =========== ABOUT US =========== */
+.about__us{
+    transition: all .3s ease-in-out;
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    background: var(--white-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__img{
+    width: 350px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.about__img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about__title{
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.about__text{
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.about__header{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 230px;
+    padding: 10px 20px;
+
+}
+.about__back{
+    color: var(--accent-color);
+    font-family: 'Srbija';
+}
+.hidden{
+    display: none;
+}
+
+main{
+    transition: all .4s ease-in-out;
+}

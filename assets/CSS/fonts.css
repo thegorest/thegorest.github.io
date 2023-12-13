@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "GothamBold";
+    src: url("../fonts/Gotham/GothamBold.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: bold;
+    font-display: swap;
+}
+@font-face {
+    font-family: "GothamMedium";
+    src: url("../fonts/Gotham/GothamMedium.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: medium;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GothamLight";
+    src: url("../fonts/Gotham/GothamLight.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Srbija";
+    src: url("../fonts/Srbija/Srbija.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: bold;
+    font-display: swap;
+}
+
